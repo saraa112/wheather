@@ -15,12 +15,8 @@ class OriginalButton extends StatelessWidget {
     return SizedBox(
       height: 60,
       width:double.infinity,
-      child:RaisedButton(
-        color: bgcolor,
+      child:ElevatedButton(
         onPressed: onpressed,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25)
-        ),
         child: Text('$text',
           style: TextStyle(
               fontSize: 18,

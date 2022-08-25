@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:school/views/auth_form.dart';
+import 'package:school/modules/auth_form.dart';
+
+import '../notification.dart';
+
 
 class AuthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
      body:SingleChildScrollView(
        child:Column(
@@ -24,7 +28,7 @@ class AuthScreen extends StatelessWidget {
                Column(
                  children: [
                    SizedBox(height: 60,),
-                   Text('مصنع النعيم للخرسانة',style:TextStyle(
+                   Text('أهلا بكم',style:TextStyle(
                      color: Colors.white,
                      fontSize: 28,
                      fontWeight: FontWeight.w600,
@@ -37,8 +41,13 @@ class AuthScreen extends StatelessWidget {
              ],
            ),
            AuthForm(),
+           TextButton(onPressed:(){
+             sendNotification();},
+               child: const Text("send notification"))
          ],
        ),
+
+       
           ),
         );
   }
